@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lina的祝福</title>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.27/dist/vue.js"></script>
+  <script>
+    const game = new Vue({
+      el: "#game",
+      data: {
+        scene: "start",
+        objects: [
+          {
+            name: "石头",
+            text: "亲爱的Lina："
+          },
+          {
+            name: "树",
+            text: "你即将离开公司，我们都感到非常不舍。"
+          },
+          {
+            name: "小溪",
+            text: "在过去的半年里，你为公司做出了巨大的贡献。"
+          },
+          {
+            name: "花",
+            text: "你是一位非常优秀的俄语外贸业务员。"
+          },
+          {
+            name: "太阳",
+            text: "还记得你刚来公司的时候，对俄语外贸业务还很陌生，但你很快就掌握了业务知识。"
+          },
+          {
+            name: "鸟",
+            text: "你总是乐于帮助他人，积极学习新的知识。"
+          },
+          {
+            name: "蝴蝶",
+            text: "我们相信，你在新的岗位上一定会取得更大的成功。"
+          },
+          {
+            name: "云",
+            text: "我们祝你在未来的职业生涯中一切顺利，早日实现自己的目标。"
+          },
+          {
+            name: "月亮",
+            text: "愿你在新的岗位上找到自己的兴趣所在，并取得更大的成就！"
+          },
+          {
+            name: "星星",
+            text: "愿你在新的职业生涯中收获更多的快乐和幸福！"
+          },
+          {
+            name: "北极星",
+            text: "愿你在未来的人生道路上，永远保持积极向上的态度，实现自己的梦想！"
+          },
+          {
+            name: "终点",
+            text: "祝福Lina！"
+          }
+        ],
+        currentObject: null,
+      },
+      methods: {
+        onObjectEnter(object) {
+          this.currentObject = object;
+          this.scene = object.name;
+        }
+      }
+    });
+  </script>
+</body>
+</html>
